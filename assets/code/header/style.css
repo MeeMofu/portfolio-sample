@@ -1,8 +1,8 @@
 /* CSS code that styles the Header */
 h1 {
     font-size: 40px;
-    padding: 5px 0px 5px 40px;
-    margin: 30px 0px 5px 0px;
+    padding: 7px 7px 4px 40px;
+    margin: 30px 0px 8px 0px;
     background-color: var(--light-blue);
     color: var(--dark);
     
@@ -15,11 +15,13 @@ header {
     flex-wrap: wrap;
     position: sticky;
     top: 0;
+    margin-bottom:10px;
 }
 header nav{
     align-self: flex-end;
-    padding: 0 25px;
+    padding: 0 27px;
     padding-bottom: 10px;
+    margin-bottom: 7px;
     background-color: var(--dark);
 }
 
@@ -44,7 +46,7 @@ header nav ul{
     list-style: none;
 }
 header nav ul li a {
-    margin: 0 5px;
+    margin: 0 10px;
     padding: 0 3px;
     border-bottom: 3px solid var(--light-blue);
     font-weight: lighter;
@@ -54,7 +56,7 @@ header nav ul li a {
 padding-top: 102px; 
 }
 
-@media screen and (max-width:700px){
+@media screen and (max-width:720px){
     .sticky {
         /* Set navigation bar become sticky after scrolling past h1 */
         position: fixed;
@@ -72,15 +74,21 @@ padding-top: 102px;
         background-color: var(--dark);
         color: var(--light-blue);
         margin: unset;
-        padding: 15px;
+        padding: 20px 0 20px 0;
     }
     header nav{
-        padding-left: 50px;
-        padding-right: 50px;
+        padding:12px 100px; /* large LR padding to help navigation content not too far spread*/
+        padding-top: 8px;
+        margin-bottom: 0px;
+        opacity: 0.8;
     }
     /* Disable hover animation for mobile*/
     header a{
         color: var(--light-blue);
         opacity: 1;
+    }
+    header a:hover{
+        color:var(--light-blue);
+        border-color: var(--light-blue);;
     }
 }
