@@ -1,6 +1,18 @@
-
+/* CSS that's uses throughout the website */
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+}
+:root{
+    --dark:rgb(49,52,62);
+    --dark-blue:rgb(70,86,113);
+    --light-blue:rgb(159,199,205);
+    --pale:rgb(238,238,247);
+}
+
+body{
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    background-color: var(--pale);
+    color: var(--dark-blue);
 }
