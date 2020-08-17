@@ -17,6 +17,11 @@ section h2{
     flex: 1 80%;
 }
 /* Contact info */
+/* .content nav{
+    justify-content: space-around;
+    align-items: center;
+    flex-wrap: wrap;
+} */
 
 .content li a{
     text-decoration: none;
