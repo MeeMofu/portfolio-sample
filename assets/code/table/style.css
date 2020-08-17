@@ -15,8 +15,11 @@
     border-radius: 5px;
     display: flex;
     flex-flow: column-reverse;
-    height: 125px;
+    background-size: cover;
+    background-position: center;
+    min-height: 125px;
     opacity: 1;
+    transition: opacity 0.4s;
 }
 .table-content:hover{
     opacity: 0.7;
@@ -55,28 +58,18 @@
 }
 .item1{
     background-image: url(../../images/item1.jpg);
-    background-size: cover;
-    background-position: center;
 }
 .item2{
     background-image: url(../../images/item2.jpg);
-    background-size: cover;
-    background-position: center;
 }
 .item3{
     background-image: url(../../images/item3.jpg);
-    background-size: cover;
-    background-position: center;
 }
 .item4{
     background-image: url(../../images/item4.jpg);
-    background-size: cover;
-    background-position: center;
 }
 .item5{
     background-image: url(../../images/item5.jpg);
-    background-size: cover;
-    background-position: center;
 }
 
 @media screen and (max-width:980px){
