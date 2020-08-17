@@ -16,3 +16,22 @@ body{
     background-color: var(--pale);
     color: var(--dark-blue);
 }
+h2{
+    text-align: center;
+    color: var(--dark-blue);
+    font-size: 25px;
+}
+/* Programming anchor link offset */
+.anchor-link {
+    position: relative;
+}
+.anchor-link span{
+    position: absolute;
+    top:-95px;
+}
+@media screen and (max-width:720px){
+    /* smaller anchor link offset for mobile */
+    .anchor-link span{
+        top:-45px;
+    }
+}

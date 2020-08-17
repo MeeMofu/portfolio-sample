@@ -1,3 +1,4 @@
+// Source: https://www.w3schools.com/howto/howto_js_sticky_header.asp
 window.onscroll = function() {myFunction()};
         
         var header = document.getElementById("Navigation");

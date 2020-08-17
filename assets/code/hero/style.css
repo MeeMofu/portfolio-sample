@@ -1,0 +1,17 @@
+/* Styling hero section */
+.hero {
+    background-image: url(../../images/hero-background.jpg);
+    height:300px;
+    background-size: cover;
+    background-position: center top;
+    display: flex;
+    align-items: center;text-align: right;
+}
+.hero h2 {
+    /* margin: 100px 15px 0 auto; */
+    margin-top: 30px;
+    margin-left: auto;
+    font-size: 85px;
+    color: var(--pale);
+    text-align: right;
+}
