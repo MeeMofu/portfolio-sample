@@ -1,0 +1,32 @@
+/* Table styles */
+.grid-container{
+    display: grid;
+    grid-auto-flow: dense;
+    grid-template: repeat(3,125px) / repeat(3, 1fr) ;
+    gap: 10px;
+}
+
+.table-content{
+    background-color: var(--pale);
+    border: 3px solid var(--light-blue);
+    border-radius: 5px;
+    display: flex;
+    flex-flow: column-reverse;
+}
+.project {
+    margin-bottom: 10px;
+    padding: 10px;
+    width: fit-content;
+    background-color: var(--light-blue);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+}
+.project h3{
+    font-size: 20px;
+}
+.project h4{
+    padding-top: 10px;
+    font-size: 12px;
+    font-weight: lighter;
+}
+

@@ -14,9 +14,10 @@ section h2{
 .content{
     padding-left: 15px;
     border-left: 3px solid var(--dark-blue);
-    flex: 1 70%;
+    flex: 1 80%;
 }
 @media screen and (max-width:720px){
+    /* Simplify content for smaller screen */
     section{
         display: flex;
     }
