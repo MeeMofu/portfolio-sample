@@ -1,0 +1,36 @@
+/* Styling the main sections*/
+section{
+    margin: 50px auto;
+    width: 80%;
+    display: flex;
+    justify-items: center;
+    flex-wrap: wrap;
+}
+section h2{
+    text-align: right;
+    flex: 1 10%;
+    padding-right: 15px;
+}
+.content{
+    padding-left: 15px;
+    border-left: 3px solid var(--dark-blue);
+    flex: 1 70%;
+}
+@media screen and (max-width:720px){
+    section{
+        display: flex;
+    }
+    section h2{
+        text-align: center;
+        padding: unset;
+        padding-bottom: 15px;
+        margin: 0 auto;
+        border-bottom: 3px solid var(--dark-blue);
+    }
+    .content{
+        padding: unset;
+        flex: 1 100%;
+        padding-top:15px ;
+        border:none;
+    }
+}
