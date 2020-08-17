@@ -1,12 +1,15 @@
 /* Table styles */
 .grid-container{
+    /* Set up grid container */
     display: grid;
     grid-auto-flow: dense;
     grid-template: repeat(3,125px) / repeat(3, 1fr) ;
     gap: 10px;
+    z-index: 1;
 }
 
 .table-content{
+    /* Setting up 1 table content */
     background-color: var(--pale);
     border: 3px solid var(--light-blue);
     border-radius: 5px;
@@ -14,12 +17,18 @@
     flex-flow: column-reverse;
 }
 .project {
+    /* Setting up the name of the project */
     margin-bottom: 10px;
     padding: 10px;
     width: fit-content;
     background-color: var(--light-blue);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+}
+
+.project a{
+    text-decoration: none;
+    color: var(--dark-blue);
 }
 .project h3{
     font-size: 20px;
@@ -29,4 +38,48 @@
     font-size: 12px;
     font-weight: lighter;
 }
+/* Setting up large and medium components */
+.large {
+    grid-row: span 2;
+    grid-column: span 2;
+}
 
+.item1{
+    background-image: url(../../images/item1.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.item2{
+    background-image: url(../../images/item2.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.item3{
+    background-image: url(../../images/item3.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.item4{
+    background-image: url(../../images/item4.jpg);
+    background-size: cover;
+    background-position: center;
+}
+.item5{
+    background-image: url(../../images/item5.jpg);
+    background-size: cover;
+    background-position: center;
+}
+
+@media screen and (max-width:980px){
+    /* Smaller screen content adjustment */
+    .grid-container{
+        grid-template: repeat(3,125px) / repeat(2, 1fr) ;
+    }
+   /* project transparancy also decrease */
+}
+@media screen and (max-width: 575px){
+    /* As screen get smaller, the content needs to be even bigger */
+    .medium{
+        grid-column: 1/-1;  /*Expand full screen*/
+    }
+}
