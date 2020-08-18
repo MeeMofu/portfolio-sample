@@ -18,11 +18,6 @@
     background-size: cover;
     background-position: center;
     min-height: 125px;
-    opacity: 1;
-    transition: opacity 0.4s;
-}
-.table-content:hover{
-    opacity: 0.7;
 }
 .project {
     /* Setting up the name of the project */
@@ -32,7 +27,9 @@
     background-color: var(--light-blue);
     border-top-right-radius: 3px;
     border-bottom-right-radius: 3px;
+    z-index: 999;  /*So that it's above the hover-screen::after element*/
 }
+
 .project a{
     text-decoration: none;
     color: var(--dark-blue);
@@ -56,10 +53,28 @@
     grid-column: span 1;
     
 }
+/* Adding an element to cover the image */
+.hover-screen{
+    position: relative;
+}
+.hover-screen::after{
+    content: "";
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    position: absolute;
+    background-color:var(--pale);
+    opacity:0;
+    transition: opacity 0.4s;
+}
+.hover-screen:hover::after{
+    opacity: 0.6;
+}
 .item1{
     background-image: url(../../images/item1.jpg);
 }
-.item2{
+    .item2{
     background-image: url(../../images/item2.jpg);
 }
 .item3{
