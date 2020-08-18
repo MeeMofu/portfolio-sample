@@ -18,7 +18,7 @@ header {
     /* margin-bottom:10px; */
     z-index: 9999;
 }
-header nav{
+.navigation{
     align-self: flex-end;
     padding: 0 27px;
     padding-bottom: 10px;
@@ -27,31 +27,28 @@ header nav{
     z-index: 9999;
 }
 
-header a{
+.navigation .link{
     text-decoration: none;
     color: var(--light-blue); /*Before hover*/
     opacity: 0.7;
     transition: color 0.5s;
     transition: opacity 0.5s;
     font-size: 20px;
+    border-bottom: 3px solid var(--light-blue);
+    padding: 0 3px;
+    margin: 0 10px;
 }
-header a:hover {
+.navigation .link:hover {
     /* When hovering */
     color: var(--pale);
     border-color: var(--pale);
     opacity: 1;
 }
-header nav ul{
+.navigation .list-wrapper{
     display: flex;
     justify-content: space-around;
     align-items: center;
     list-style: none;
-}
-header nav ul li a {
-    margin: 0 10px;
-    padding: 0 3px;
-    border-bottom: 3px solid var(--light-blue);
-    font-weight: lighter;
 }
 
 .sticky + .content {
@@ -78,19 +75,28 @@ padding-top: 102px;
         margin: unset;
         padding: 20px 0 20px 0;
     }
-    header nav{
+    .navigation{
         padding:12px 50px; /* large LR padding to help navigation content not too far spread*/
         padding-top: 8px;
         margin-bottom: 0px;
         opacity: 0.8;
     }
     /* Disable hover animation for mobile*/
-    header a{
+    .navigation link{
         color: var(--light-blue);
         opacity: 1;
     }
-    header a:hover{
+    .navigation .link:hover{
         color:var(--light-blue);
-        border-color: var(--light-blue);;
+        border-color: var(--light-blue);
+    }
+}
+@media screen and (max-width:350px){
+    /* remove padding */
+    .navigation{
+        padding: 12px 0;
+    }
+    .navigation .link{
+        margin: 0px 5px;
     }
 }

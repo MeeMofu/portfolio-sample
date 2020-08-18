@@ -17,34 +17,25 @@ section h2{
     flex: 1 80%;
 }
 /* Contact info */
-/* .content nav{
-    justify-content: space-around;
-    align-items: center;
-    flex-wrap: wrap;
-} */
-
-.content li a{
+/* Got lazy of creating yet another folder lol */
+.contacts .info{
     text-decoration: none;
     color: var(--dark-blue);
-    font-weight: bolder;
-    
+    font-weight: bold;
+    /* margin: 0 10px;
+    padding: 0 3px; */
+    border-bottom: 3px solid var(--dark-blue);
 }
-.content nav ul li{
+.contacts .list-content{
     padding: 7px;
 }
-.content  nav ul{
+.contacts .list-wrapper{
     display: flex;
     flex-wrap: wrap;
     list-style: none;
     justify-content: space-around;
     align-content: space-between;
     
-}
-.content  nav ul li a {
-    margin: 0 10px;
-    padding: 0 3px;
-    border-bottom: 3px solid var(--dark-blue);
-    font-weight: lighter;
 }
 
 @media screen and (max-width:720px){
