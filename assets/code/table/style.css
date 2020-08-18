@@ -3,7 +3,7 @@
     /* Set up grid container */
     display: grid;
     grid-auto-flow: dense;
-    grid-template-columns: (3, 1fr) ;
+    grid-template-columns: repeat(3, 1fr) ;
     grid-auto-rows: 125px;
     gap: 10px;
 }
@@ -18,18 +18,8 @@
     background-size: cover;
     background-position: center;
     height: 100%;
+    overflow: hidden;
 }
-.project {
-    /* Setting up the name of the project */
-    margin-bottom: 10px;
-    padding: 10px;
-    width: fit-content;
-    background-color: var(--light-blue);
-    border-top-right-radius: 3px;
-    border-bottom-right-radius: 3px;
-    z-index: 999;  /*So that it's above the hover-screen::after element, but below hyperlink image*/
-}
-
 .project a{
     text-decoration: none;
     color: var(--dark-blue);
@@ -46,14 +36,28 @@
 .large {
     grid-row: span 2;
     grid-column: span 2;
-    height: 100%;
 }
 .medium{
     grid-row: span 1;
     grid-column: span 1;
-    height: 100%;
-    
 }
+.project {
+    /* Setting up the label of the project */
+    margin-bottom: 10px;
+    padding: 10px;
+    width: fit-content;
+    background-color: var(--light-blue);
+    border-top-right-radius: 3px;
+    border-bottom-right-radius: 3px;
+    z-index: 999;  /*So that it's above the hover-screen::after element, but below hyperlink image*/
+    position: absolute;
+    left:-150px;  /* Move the label off screen */
+    transition: left 0.3s;
+}
+.hover-screen:hover .project{
+    left:0; 
+}
+
 /* Adding an element to cover the image */
 .hover-screen{
     position: relative;
@@ -102,9 +106,13 @@
     .grid-container{
         grid-template: repeat(3,125px) / repeat(2, 1fr) ;
     }
-   /* label transparancy also decrease */
+   /* label transparancy decrease and remove animation*/
     .project{
         opacity: 0.75;
+        left:0; 
+    }
+    .hover-screen:hover::after{
+        opacity: 0;
     }
 }
 @media screen and (max-width: 575px){
