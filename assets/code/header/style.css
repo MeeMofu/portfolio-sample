@@ -25,6 +25,7 @@ header {
     margin-bottom: 7px;
     background-color: var(--dark);
     z-index: 9999;
+    overflow:hidden;
 }
 
 .navigation .link{
@@ -94,7 +95,7 @@ padding-top: 102px;
 @media screen and (max-width:350px){
     /* remove padding */
     .navigation{
-        padding: 12px 0;
+        padding: 12px 0px;
     }
     .navigation .link{
         margin: 0px 0px;

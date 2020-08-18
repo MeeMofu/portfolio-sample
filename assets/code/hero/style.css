@@ -5,13 +5,21 @@
     background-size: cover;
     background-position: center top;
     display: flex;
-    align-items: center;text-align: right;
+    align-items: flex-end; 
+    text-align: right;
+    position: relative;
 }
 .hero h2 {
-    /* margin: 100px 15px 0 auto; */
-    margin-top: 30px;
-    margin-left: auto;
+    margin-top: 50px;
     font-size: 80px;
+    padding-bottom: 40px;
     color: var(--pale);
     text-align: right;
+    position: absolute;
+    right: 0;
+}
+@media screen and (max-width:420px){
+    .hero h2{
+        padding-bottom: 10px;
+    }
 }
